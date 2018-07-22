@@ -20,23 +20,24 @@ function draw() {
   // filter(INVERT);
   background(200);
 
-  noStroke();
+
   push();
+  noStroke();
   texture(capture);
   rectMode(CENTER);
   rotateX(angle * 0.5);
   rotateY(angle * 1.2);
   rotateZ(angle * 0.02);
-  box(width/4);
+  box(width / 4);
   pop();
 
   push();
   translate(-150, -50, 100);
-
+  stroke(10);
   rotateX(angle * 0.5);
   rotateY(angle * 0.2);
   rotateZ(angle * 1.5);
-  ambientLight(255,0,0);
+  ambientLight(255, 0, 0);
   ambientMaterial(255);
   model(heart);
   pop();
