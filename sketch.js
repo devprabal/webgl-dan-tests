@@ -24,19 +24,20 @@ function draw() {
   push();
   texture(capture);
   rectMode(CENTER);
-  rotateX(angle);
+  rotateX(angle * 0.5);
   rotateY(angle * 1.2);
   rotateZ(angle * 0.02);
-  box(200);
+  box(width/4);
   pop();
 
   push();
-  translate(-150, -50, 0);
-  noStroke();
-  rotateX(angle);
+  translate(-150, -50, 100);
+
+  rotateX(angle * 0.5);
   rotateY(angle * 0.2);
-  rotateZ(angle * 0.2);
-  normalMaterial();
+  rotateZ(angle * 1.5);
+  ambientLight(255,0,0);
+  ambientMaterial(255);
   model(heart);
   pop();
   angle += 0.01;
